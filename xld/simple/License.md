@@ -1,23 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2020 XEBIALABS
+Copyright ${year} ${name}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
-<synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.xebialabs.com/deployit/synthetic"
-           xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
-
-    <type type="simple.ExecutedDeployment" deployable-type="simple.Deployment" extends="udm.BaseDeployedArtifact" container-type="simple.Container">
-		<generate-deployable type="simple.Deployment" extends="udm.BaseDeployableFolderArtifact" copy-default-values="true"/>
-        <property name="application_property" required="false" default="some_value" description="A property defined on the deployable."/>
-	</type>
-
-	<type type="simple.Container" extends="generic.Container" description="Simple Target Container">
-		<property name="container_property" required="false" default="another_value" description="A property defined on the container."/>
-	</type>
-
-</synthetic>

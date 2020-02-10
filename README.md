@@ -74,7 +74,7 @@ Adding this plugin to your tool is as simple as copying it to the `plugins` dire
 
 ### XL Deploy Resources
 - [XL Deploy Main Documentation](https://docs.xebialabs.com/xl-deploy/)
-- [XL Deploy Concepts](https://docs.xebialabs.com/xl-deploy/concept/)
+- [XL Deploy plugin tutorial](https://docs.xebialabs.com/v.9.5/xl-deploy/concept/xl-deploy-plugin-tutorial/#define-the-new-type)
 - [XL Deploy Custom Plugin](https://docs.xebialabs.com/xl-deploy/how-to/create-an-xl-deploy-plugin.html)
 - [XL Deploy Rest API](https://docs.xebialabs.com/xl-deploy/latest/rest-api/)
 
