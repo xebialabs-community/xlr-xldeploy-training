@@ -19,7 +19,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		<steps>
 			<os-script>
 				<order>10</order>
-                <description>Initial Advanced Deployment</description>
+        <description>Initial Advanced Deployment</description>
 				<script>scripts/create</script>
 			</os-script>
 		</steps>
@@ -47,4 +47,44 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		</conditions>
 		<planning-script-path>scripts/generate_destroy_plan.py</planning-script-path>
 	</rule>
+	<!--
+	##########################################################################
+	#  Demystify XLD Variables
+	#
+	-->
+	<rule name="Demystify.scriptrule" scope="deployed">
+    <conditions>
+      <type>advanced.ExecutedDeployment</type>
+      <operation>CREATE</operation>
+      <operation>MODIFY</operation>
+      <operation>DESTROY</operation>
+    </conditions>
+    <steps>
+      <os-script>
+				<description>Demystify Free Marker Variables</description>
+        <script>scripts/osscript.sh.ftl</script>
+        <freemarker-context>
+          <delta expression="true">delta</delta>
+        </freemarker-context>
+      </os-script>
+    </steps>
+  </rule>
+	<rule name="Demystify.testrule" scope="deployed">
+    <conditions>
+      <type>advanced.ExecutedDeployment</type>
+      <operation>CREATE</operation>
+      <operation>MODIFY</operation>
+      <operation>DESTROY</operation>
+    </conditions>
+    <steps>
+      <jython>
+				<description>Demystify Python Variables</description>
+       	<script-path>scripts/myscript.py</script-path>
+        <jython-context>
+          <user>XebiaLabs</user>
+        </jython-context>
+      </jython>
+    </steps>
+  </rule>
+
 </rules>

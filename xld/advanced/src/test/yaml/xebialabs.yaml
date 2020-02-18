@@ -1,0 +1,7 @@
+apiVersion: xl/v1
+kind: Import
+metadata:
+  imports:
+    - xebialabs/xld-application.yaml
+    - xebialabs/xld-infrastructure.yaml
+    - xebialabs/xld-environments.yaml

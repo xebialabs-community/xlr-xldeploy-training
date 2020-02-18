@@ -1,0 +1,14 @@
+---
+apiVersion: xl-deploy/v1
+kind: Applications
+spec:
+- name: Applications/myApplication
+  type: udm.Application
+  lastVersion: 1.0.0
+  children:
+  - name: 1.0.0
+    type: udm.DeploymentPackage
+    deployables:
+    - name: deployment
+      type: advanced.Deployment
+      file: !file "artifacts/Applications/myApplication/1.0.0/deployment/osu.zip"
